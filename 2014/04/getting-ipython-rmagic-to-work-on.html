@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://www.jedludlow.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.jedludlow.com/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.jedludlow.com/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://www.jedludlow.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jed Ludlow Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28031504-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Jed Ludlow" />
+<meta name="description" content="After updating to IPython 2.0, I decided to get rmagic working on a Windows 8.1 install. These instructions should probably work with IPyhon 1.X, too, although I have not tried. R on Windows Behind the scenes, rmagic assumes that a working version of R is available on …" />
+<meta name="keywords" content="python, r">
+
+<meta property="og:site_name" content="Jed Ludlow"/>
+<meta property="og:title" content="Getting IPython rmagic to Work on Windows"/>
+<meta property="og:description" content="After updating to IPython 2.0, I decided to get rmagic working on a Windows 8.1 install. These instructions should probably work with IPyhon 1.X, too, although I have not tried. R on Windows Behind the scenes, rmagic assumes that a working version of R is available on …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.jedludlow.com/2014/04/getting-ipython-rmagic-to-work-on.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2014-04-29 01:26:00-06:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.jedludlow.com/author/jed-ludlow.html">
+<meta property="article:section" content="tech"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="r"/>
+<meta property="og:image" content="https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80">
+
+  <title>Jed Ludlow &ndash; Getting IPython rmagic to Work on Windows</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.jedludlow.com">
+        <img src="https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80" alt="Jed Ludlow" title="Jed Ludlow">
+      </a>
+      <h1><a href="http://www.jedludlow.com">Jed Ludlow</a></h1>
+
+<p>Multidisciplinary Engineer</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://www.jedludlow.com/pages/about.html#about">about</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:info@jedludlow.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/jedludlow" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/jedludlow" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-rss" href="http://www.jedludlow.com/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://www.jedludlow.com">    Home
+</a>
+
+      <a href="http://www.jedludlow.com/archives.html">Archives</a>
+      <a href="http://www.jedludlow.com/categories.html">Categories</a>
+      <a href="http://www.jedludlow.com/tags.html">Tags</a>
+
+      <a href="http://www.jedludlow.com/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="getting-ipython-rmagic-to-work-on">Getting IPython rmagic to Work on Windows</h1>
+    <p>
+          Posted on Tue 29 April 2014 in <a href="http://www.jedludlow.com/category/tech.html">tech</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>After updating to <a href="http://ipython.org/">IPython</a> 2.0, I decided to get <a href="http://ipython.org/ipython-doc/dev/config/extensions/rmagic.html"><code>rmagic</code></a> working
+on a Windows 8.1 install. These instructions should probably work with
+IPyhon 1.X, too, although I have not tried.  </p>
+<h2>R on Windows</h2>
+<p>Behind the scenes, rmagic assumes that a working version of <a href="http://www.r-project.org/">R</a>
+is available on the Windows <code>PATH</code>. The most recent Windows
+installers for R 3.0 do not modify the <code>PATH</code>
+variable. This is actually a good thing because it allows you to install
+multiple versions of R in whatever 32-bit or 64-bit flavors you'd like,
+and they can all co-exist peacefully. That said, to get rmagic 
+to work you'll have to put one of
+them on the <code>PATH</code> by hand.</p>
+<h3>Which Flavor?</h3>
+<p>The flavor of R you put on the <code>PATH</code> must
+match the flavor of Python you are targeting. More specifically, if
+you're running 32-bit Python, place a 32-bit flavor of R on the path.
+The locations of these binaries will probably look something like this:</p>
+<ul>
+<li>32-bit R: <code>C:\Program Files\R\R-3.0.3\bin\i386</code></li>
+<li>64-bit R: <code>C:\Program Files\R\R-3.0.3\bin\x64</code></li>
+</ul>
+<p>It's <em>critical</em> to go all the way down to these flavor-specific
+directories since it's really <code>R.dll</code> that
+needs be available to rmagic. Why
+is that? Read on.</p>
+<h3><code>rpy2</code></h3>
+<p>In addition to a working R install, rmagic in
+IPython 2.0 uses <a href="http://rpy.sourceforge.net/rpy2.html"><code>rpy2</code></a> as
+the connection between Python and R. Installing <code>rpy2</code> on
+Windows is not quite as simple as it perhaps should be, and <a href="http://stackoverflow.com/search?q=rpy2+windows">Stack
+Overflow is littered</a> with questions about failed attempts at using <code>pip</code>
+or <code>easy_install</code>.
+After culling through several of those posts, I happened upon one that
+actually had the <a href="http://stackoverflow.com/questions/5068760/bizzarre-issue-trying-to-make-rpy2-2-1-9-work-with-r-2-12-1-using-python-2-6-un">right magic beans</a>. The post is a little dated, so
+here's a refreshed summary of the simplest path to success today:</p>
+<ol>
+<li>As described above, pick a suitable flavor of R, and put it on the
+    <code>PATH</code>.</li>
+<li>Pull down the (unofficial) <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2"><code>rpy2</code> binaries</a> from
+    <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Christhoph Gohlke's treasure trove</a>. Make sure you pick the right Python version of the
+    binaries to match your Python flavor, including Python version
+    number.</li>
+<li>Install those binaries into whatever Python environment you intend
+    to use. (Did you know you can <a href="http://stackoverflow.com/questions/3271590/can-i-install-python-windows-packages-into-virtualenvs">install binary packages into any Python environment</a>, even those not in the Windows registry? That
+    includes an <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> install.)</li>
+<li>Create an environment variable called <code>R_HOME</code>,
+    and point it to the base R install directory. If your paths look
+    like those above, that would be <code>"C:\Program
+    Files\R\R-3.0.3"</code> or
+    whatever matches your R version.</li>
+<li>Create an environment variable
+    called <code>R_USER</code>, and set it to your Windows username.
+    This looks to be in line with <a href="https://bitbucket.org/lgautier/rpy2/issue/95/automagic-settings-for-windows">recent discussion</a> on the R
+    development issues list.</li>
+</ol>
+<p>Once you've done all that, open up a fresh command prompt and verify
+that all your environment changes were correctly set. Then fire up
+IPython notebook, issue</p>
+<div class="highlight"><pre><span></span><code><span class="nf">%load_ext</span> <span class="n">rmagic</span>
+</code></pre></div>
+
+
+<p>in a cell, and the rest of the
+<a href="http://ipython.org/ipython-doc/dev/config/extensions/rmagic.html">guidance in the IPython documentation</a>
+should then apply.</p>
+<h2>Some Issues</h2>
+<p>Unfortunately, it's not necessarily
+all roses after that. There are still issues with getting some
+information back and forth across the R-Python interface in pristine
+format. Sometimes the output from R commands doesn't completely make it
+into the notebook and ends up being printed in the command shell window
+from which the notebook is running. But aside from a few minor
+inconveniences, it doesn't look like there are any real errors
+happening.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.jedludlow.com/tag/python.html">python</a>
+      <a href="http://www.jedludlow.com/tag/r.html">r</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jedludlow';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jed Ludlow ",
+  "url" : "http://www.jedludlow.com",
+  "image": "https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

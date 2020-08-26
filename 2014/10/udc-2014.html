@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://www.jedludlow.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.jedludlow.com/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.jedludlow.com/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://www.jedludlow.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jed Ludlow Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28031504-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Jed Ludlow" />
+<meta name="description" content="I competed in this year&#39;s edition of the Utah Data Competition, a local data science competition. The semiconductor yield prediction problem seemed simple enough on the surface, but it ultimately proved to be quite challenging. I attempted several modeling approaches but eventually converged on two that received most of my …" />
+<meta name="keywords" content="python, data science">
+
+<meta property="og:site_name" content="Jed Ludlow"/>
+<meta property="og:title" content="Utah Data Competition 2014"/>
+<meta property="og:description" content="I competed in this year&#39;s edition of the Utah Data Competition, a local data science competition. The semiconductor yield prediction problem seemed simple enough on the surface, but it ultimately proved to be quite challenging. I attempted several modeling approaches but eventually converged on two that received most of my …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.jedludlow.com/2014/10/udc-2014.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2014-10-28 22:57:00-06:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.jedludlow.com/author/jed-ludlow.html">
+<meta property="article:section" content="tech"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="data science"/>
+<meta property="og:image" content="https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80">
+
+  <title>Jed Ludlow &ndash; Utah Data Competition 2014</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.jedludlow.com">
+        <img src="https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80" alt="Jed Ludlow" title="Jed Ludlow">
+      </a>
+      <h1><a href="http://www.jedludlow.com">Jed Ludlow</a></h1>
+
+<p>Multidisciplinary Engineer</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://www.jedludlow.com/pages/about.html#about">about</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:info@jedludlow.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/jedludlow" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/jedludlow" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-rss" href="http://www.jedludlow.com/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://www.jedludlow.com">    Home
+</a>
+
+      <a href="http://www.jedludlow.com/archives.html">Archives</a>
+      <a href="http://www.jedludlow.com/categories.html">Categories</a>
+      <a href="http://www.jedludlow.com/tags.html">Tags</a>
+
+      <a href="http://www.jedludlow.com/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="udc-2014">Utah Data Competition 2014</h1>
+    <p>
+          Posted on Tue 28 October 2014 in <a href="http://www.jedludlow.com/category/tech.html">tech</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>I competed in this year's edition of the <a href="http://www.utahdatacompetition.com/">Utah Data Competition</a>, 
+a local data science competition. The semiconductor yield prediction problem
+seemed simple enough on the surface, but it ultimately proved to be quite
+challenging. I attempted several modeling approaches but eventually 
+converged on two that received most of my attention: 
+a modified ridge regression with special cost function, and an
+approximate Kalman filter (my dynamic systems background creeping in!). An IPython notebook with code for both approaches
+is <a href="https://github.com/jedludlow/udc-2014">available on Github</a> for download or can be <a href="http://nbviewer.ipython.org/github/jedludlow/udc-2014/blob/master/utah_data_competition_2014.ipynb">viewed directly
+with nbviewer</a>. A shorter summary of the notebook is 
+available as <a href="http://www.jedludlow.com/udc-2014/">slides</a>, too.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.jedludlow.com/tag/python.html">python</a>
+      <a href="http://www.jedludlow.com/tag/data-science.html">data science</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jedludlow';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jed Ludlow ",
+  "url" : "http://www.jedludlow.com",
+  "image": "https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
