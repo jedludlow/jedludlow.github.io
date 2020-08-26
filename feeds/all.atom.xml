@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jed Ludlow</title><link href="http://www.jedludlow.com/" rel="alternate"></link><link href="http://www.jedludlow.com/feeds/all.atom.xml" rel="self"></link><id>http://www.jedludlow.com/</id><updated>2015-03-14T12:15:00-06:00</updated><subtitle>Multidisciplinary Engineer</subtitle><entry><title>Utah Code Camp 2015</title><link href="http://www.jedludlow.com/2015/03/ucc-2015.html" rel="alternate"></link><published>2015-03-14T12:15:00-06:00</published><updated>2015-03-14T12:15:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2015-03-14:/2015/03/ucc-2015.html</id><summary type="html">&lt;p&gt;I presented at Utah Code Camp 2015 on machine learning
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jed Ludlow</title><link href="https://www.jedludlow.com/" rel="alternate"></link><link href="https://www.jedludlow.com/feeds/all.atom.xml" rel="self"></link><id>https://www.jedludlow.com/</id><updated>2015-03-14T12:15:00-06:00</updated><subtitle>Multidisciplinary Engineer</subtitle><entry><title>Utah Code Camp 2015</title><link href="https://www.jedludlow.com/2015/03/ucc-2015.html" rel="alternate"></link><published>2015-03-14T12:15:00-06:00</published><updated>2015-03-14T12:15:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2015-03-14:/2015/03/ucc-2015.html</id><summary type="html">&lt;p&gt;I presented at Utah Code Camp 2015 on machine learning
 with the Google Prediction API. IPython notebooks
 are &lt;a href="https://github.com/jedludlow/utah-code-camp-2015"&gt;available on GitHub&lt;/a&gt;, or they can be viewed directly
 with the IPython Notebook Viewer here:&lt;/p&gt;
@@ -17,9 +17,9 @@ with the IPython Notebook Viewer here:&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://nbviewer.ipython.org/github/jedludlow/utah-code-camp-2015/blob/master/sklearn_fft_ave.ipynb"&gt;Taylor Swift Prediction with scikit-learn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://nbviewer.ipython.org/github/jedludlow/utah-code-camp-2015/blob/master/google_prediction_fft_ave.ipynb"&gt;Taylor Swift Prediction with Google Prediction API&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://nbviewer.ipython.org/github/jedludlow/utah-code-camp-2015/blob/master/ipython_fft_example.ipynb"&gt;Interpreting NumPy FFTs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="tech"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Big Data Utah at StartSLC 2015</title><link href="http://www.jedludlow.com/2015/01/bdu-startslc-2015.html" rel="alternate"></link><published>2015-01-30T02:25:00-07:00</published><updated>2015-01-30T02:25:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2015-01-30:/2015/01/bdu-startslc-2015.html</id><content type="html">&lt;p&gt;I presented on machine learning and prediction
+&lt;/ul&gt;</content><category term="tech"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Big Data Utah at StartSLC 2015</title><link href="https://www.jedludlow.com/2015/01/bdu-startslc-2015.html" rel="alternate"></link><published>2015-01-30T02:25:00-07:00</published><updated>2015-01-30T02:25:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2015-01-30:/2015/01/bdu-startslc-2015.html</id><content type="html">&lt;p&gt;I presented on machine learning and prediction
 to the &lt;a href="http://www.bigdatautah.org/"&gt;Big Data Utah&lt;/a&gt; meetings as part
-of &lt;a href="https://startslc.com/"&gt;StartSLC&lt;/a&gt; 2015. Check out the &lt;a href="http://www.jedludlow.com/prediction-demystified/"&gt;the slides&lt;/a&gt;!&lt;/p&gt;</content><category term="tech"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Utah Data Competition 2014</title><link href="http://www.jedludlow.com/2014/10/udc-2014.html" rel="alternate"></link><published>2014-10-28T22:57:00-06:00</published><updated>2014-10-28T22:57:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-10-28:/2014/10/udc-2014.html</id><summary type="html">&lt;p&gt;I competed in this year's edition of the &lt;a href="http://www.utahdatacompetition.com/"&gt;Utah Data Competition&lt;/a&gt;, 
+of &lt;a href="https://startslc.com/"&gt;StartSLC&lt;/a&gt; 2015. Check out the &lt;a href="http://www.jedludlow.com/prediction-demystified/"&gt;the slides&lt;/a&gt;!&lt;/p&gt;</content><category term="tech"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Utah Data Competition 2014</title><link href="https://www.jedludlow.com/2014/10/udc-2014.html" rel="alternate"></link><published>2014-10-28T22:57:00-06:00</published><updated>2014-10-28T22:57:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-10-28:/2014/10/udc-2014.html</id><summary type="html">&lt;p&gt;I competed in this year's edition of the &lt;a href="http://www.utahdatacompetition.com/"&gt;Utah Data Competition&lt;/a&gt;, 
 a local data science competition. The semiconductor yield prediction problem
 seemed simple enough on the surface, but it ultimately proved to be quite
 challenging. I attempted several modeling approaches but eventually 
@@ -32,7 +32,7 @@ a modified ridge regression with special cost function, and an
 approximate Kalman filter (my dynamic systems background creeping in!). An IPython notebook with code for both approaches
 is &lt;a href="https://github.com/jedludlow/udc-2014"&gt;available on Github&lt;/a&gt; for download or can be &lt;a href="http://nbviewer.ipython.org/github/jedludlow/udc-2014/blob/master/utah_data_competition_2014.ipynb"&gt;viewed directly
 with nbviewer&lt;/a&gt;. A shorter summary of the notebook is 
-available as &lt;a href="http://www.jedludlow.com/udc-2014/"&gt;slides&lt;/a&gt;, too.&lt;/p&gt;</content><category term="tech"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Who Was Harold Black?</title><link href="http://www.jedludlow.com/2014/09/harold-black.html" rel="alternate"></link><published>2014-09-03T20:02:00-06:00</published><updated>2014-09-03T20:02:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-09-03:/2014/09/harold-black.html</id><summary type="html">&lt;p&gt;A little over a hundred years ago, some bright people 
+available as &lt;a href="http://www.jedludlow.com/udc-2014/"&gt;slides&lt;/a&gt;, too.&lt;/p&gt;</content><category term="tech"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Who Was Harold Black?</title><link href="https://www.jedludlow.com/2014/09/harold-black.html" rel="alternate"></link><published>2014-09-03T20:02:00-06:00</published><updated>2014-09-03T20:02:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-09-03:/2014/09/harold-black.html</id><summary type="html">&lt;p&gt;A little over a hundred years ago, some bright people 
 thought it might be &lt;em&gt;really useful&lt;/em&gt; for someone
 in New York to talk to someone in San Fransisco &lt;a href="http://en.wikipedia.org/wiki/First_transcontinental_telephone_call"&gt;&lt;em&gt;by telephone&lt;/em&gt;&lt;/a&gt;.
 They eventually succeeded in completing the first
@@ -63,7 +63,7 @@ Harold had succeeded in arranging an assignment to work
 on stabilizing and linearizing amplifiers to support the
 development of a large-scale long distance phone system. It would
 be several years before his work bore fruit.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt text" src="http://www.jedludlow.com/images/Harold_Stephen_Black.gif" title="Harold Stephen Black"&gt;&lt;br&gt;
+&lt;p&gt;&lt;img alt="Alt text" src="https://www.jedludlow.com/images/Harold_Stephen_Black.gif" title="Harold Stephen Black"&gt;&lt;br&gt;
 &lt;em&gt;Harold Black. &lt;a href="http://en.wikipedia.org/wiki/File:Harold_Stephen_Black.gif"&gt;(Source)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;If you've studied dynamic systems or control engineering
 the names of Nyquist and Bode, also &lt;a href="http://en.wikipedia.org/wiki/Bell_Labs"&gt;Bell Labs&lt;/a&gt; scientists in the
@@ -82,7 +82,7 @@ This classic video footage on the subject from the AT&amp;amp;T archives is wort
 later and relate to impedance matching the amplifier to the load.
 According to an &lt;a href="http://dx.doi.org/10.1109/MSPEC.1977.6501721"&gt;article published in IEEE Spectrum&lt;/a&gt;, the
 sketches from the initial invention, also sketched on newsprint, were actually a simple block diagram and a couple of equations.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://www.jedludlow.com/images/negative_feedback.png" width="315" /&gt;&lt;br&gt;
+&lt;p&gt;&lt;img src="https://www.jedludlow.com/images/negative_feedback.png" width="315" /&gt;&lt;br&gt;
 &lt;em&gt;Negative feedback block diagram and equations. &lt;a href="http://dx.doi.org/10.1109/MSPEC.1977.6501721"&gt;(Source)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For me personally, the invention itself is only part of the significance of this story. I'm
 forever grateful for Harold's candor in describing his years
@@ -120,7 +120,7 @@ don't immediately present themselves, keep going. Wait
 patiently for pure inspiration.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;(An &lt;a href="http://www.ieeeghn.org/wiki/index.php/Oral-History:Harold_S._Black"&gt;extended oral history&lt;/a&gt; of Harold Black's contributions is available
-from the IEEE History Center.)&lt;/em&gt;&lt;/p&gt;</content><category term="tech"></category><category term="embedded"></category></entry><entry><title>Getting IPython rmagic to Work on Windows</title><link href="http://www.jedludlow.com/2014/04/getting-ipython-rmagic-to-work-on.html" rel="alternate"></link><published>2014-04-29T01:26:00-06:00</published><updated>2014-04-29T01:26:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-04-29:/2014/04/getting-ipython-rmagic-to-work-on.html</id><summary type="html">&lt;p&gt;After updating to &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt; 2.0, I decided to get &lt;a href="http://ipython.org/ipython-doc/dev/config/extensions/rmagic.html"&gt;&lt;code&gt;rmagic&lt;/code&gt;&lt;/a&gt; working
+from the IEEE History Center.)&lt;/em&gt;&lt;/p&gt;</content><category term="tech"></category><category term="embedded"></category></entry><entry><title>Getting IPython rmagic to Work on Windows</title><link href="https://www.jedludlow.com/2014/04/getting-ipython-rmagic-to-work-on.html" rel="alternate"></link><published>2014-04-29T01:26:00-06:00</published><updated>2014-04-29T01:26:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-04-29:/2014/04/getting-ipython-rmagic-to-work-on.html</id><summary type="html">&lt;p&gt;After updating to &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt; 2.0, I decided to get &lt;a href="http://ipython.org/ipython-doc/dev/config/extensions/rmagic.html"&gt;&lt;code&gt;rmagic&lt;/code&gt;&lt;/a&gt; working
 on a Windows 8.1 install. These instructions should probably work with
 IPyhon 1.X, too, although I have not tried.  &lt;/p&gt;
 &lt;h2&gt;R on Windows&lt;/h2&gt;
@@ -198,7 +198,7 @@ format. Sometimes the output from R commands doesn't completely make it
 into the notebook and ends up being printed in the command shell window
 from which the notebook is running. But aside from a few minor
 inconveniences, it doesn't look like there are any real errors
-happening.&lt;/p&gt;</content><category term="tech"></category><category term="python"></category><category term="r"></category></entry><entry><title>Irrigation System Performance Measurement on the Cheap</title><link href="http://www.jedludlow.com/2014/04/irrigation-system-performance.html" rel="alternate"></link><published>2014-04-26T11:33:00-06:00</published><updated>2014-04-26T11:33:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-04-26:/2014/04/irrigation-system-performance.html</id><summary type="html">&lt;p&gt;What began as a simple exercise in turning on the irrigation water to
+happening.&lt;/p&gt;</content><category term="tech"></category><category term="python"></category><category term="r"></category></entry><entry><title>Irrigation System Performance Measurement on the Cheap</title><link href="https://www.jedludlow.com/2014/04/irrigation-system-performance.html" rel="alternate"></link><published>2014-04-26T11:33:00-06:00</published><updated>2014-04-26T11:33:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2014-04-26:/2014/04/irrigation-system-performance.html</id><summary type="html">&lt;p&gt;What began as a simple exercise in turning on the irrigation water to
 the yard culminated in an hour of &lt;a href="http://sethgodin.typepad.com/seths_blog/2005/03/dont_shave_that.html"&gt;yak shaving&lt;/a&gt; in which I actually
 measured the performance of my sprinklers. The well-meaning people at my
 City Hall had sent out an informative flyer earlier in the week with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;What began as a simple exercise in turning on the irrigation water to
@@ -226,8 +226,8 @@ question why my wife has saved so many of these in a drawer in the
 kitchen. I now understand that they are a valuable instrument to an
 irrigation system measurement technician, and she &lt;em&gt;must&lt;/em&gt; have realized
 that long before I did.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://www.jedludlow.com/images/cottage_cheese_cup.jpg" width="315" /&gt;
-&lt;img src="http://www.jedludlow.com/images/measure_cup_opening.jpg" width="300" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.jedludlow.com/images/cottage_cheese_cup.jpg" width="315" /&gt;
+&lt;img src="https://www.jedludlow.com/images/measure_cup_opening.jpg" width="300" /&gt;&lt;/p&gt;
 &lt;p&gt;With catch cups in hand, I headed to the yard to make
 measurements. My yard has conventional pop up spray heads in the front
 and a bit fancier gear driven rotor heads in the back. When I installed
@@ -238,7 +238,7 @@ back lawn didn't fare very well over the last summer compared to the
 front, so a primary goal of my measurements was to get a feel for just
 how much longer the recommended station timing would be for the back
 yard rotors.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://www.jedludlow.com/images/cups_on_grass.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.jedludlow.com/images/cups_on_grass.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;After laying out catch cups and throwing on the stations for
 several minutes I was ready to measure the volume of water in each cup.
 I debated using a tablespoon and converting the measurements to mL
@@ -246,12 +246,12 @@ later, but then I remembered that there is another stash of special
 little plastic cups in our house has that has mL graduations built right
 in. Thank you, children's cold medicine people, for providing miniature
 graduated cylinders in every box!&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://www.jedludlow.com/images/take_your_medicine.jpg" width="300"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.jedludlow.com/images/take_your_medicine.jpg" width="300"/&gt;&lt;/p&gt;
 &lt;p&gt;I decided to scale back the effort and only measure one station in the
 front and one in the back. I found the simple instructions for mapping
 and recording the measurements as suggested by the website to be quite
 helpful.  &lt;/p&gt;
-&lt;p&gt;&lt;img src="http://www.jedludlow.com/images/raw_sprinkler_notes.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://www.jedludlow.com/images/raw_sprinkler_notes.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;With final measurements in hand it was a simple matter to run the
 calculator on the website. I won't post the final recommended run times
 since they would be specific to my system, climate, and soil type. But I
@@ -259,7 +259,7 @@ will say that, much to my surprise, the gear rotors need to run &lt;em&gt;four
 times&lt;/em&gt; as long as the pop ups to deliver an equivalent volume of water
 to the yard. That's a lot longer than I was running them last summer
 when the back grass was looking so bad. And it only took me one
-inexpensive yak shave to figure that out.&lt;/p&gt;</content><category term="misc"></category><category term="data science"></category></entry><entry><title>My 15 Seconds of Car Talk Fame</title><link href="http://www.jedludlow.com/2013/03/my-15-seconds-of-car-talk-fame.html" rel="alternate"></link><published>2013-03-03T21:54:00-07:00</published><updated>2013-03-03T21:54:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2013-03-03:/2013/03/my-15-seconds-of-car-talk-fame.html</id><summary type="html">&lt;p&gt;It was a dark day around our house several months ago when it was
+inexpensive yak shave to figure that out.&lt;/p&gt;</content><category term="misc"></category><category term="data science"></category></entry><entry><title>My 15 Seconds of Car Talk Fame</title><link href="https://www.jedludlow.com/2013/03/my-15-seconds-of-car-talk-fame.html" rel="alternate"></link><published>2013-03-03T21:54:00-07:00</published><updated>2013-03-03T21:54:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2013-03-03:/2013/03/my-15-seconds-of-car-talk-fame.html</id><summary type="html">&lt;p&gt;It was a dark day around our house several months ago when it was
 announced that no new &lt;a href="http://www.cartalk.com/"&gt;Car Talk&lt;/a&gt; episodes would be recorded. The show
 has been part of my week for nearly 20 years. Like all great shows that
 are eventually put out to pasture, we can still …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It was a dark day around our house several months ago when it was
@@ -285,7 +285,7 @@ write-up had been mentioned during a "Stump the Chumps" segment of the
 show that week, and he called to tell me about it. I had missed the
 broadcast entirely. This week's rebroadcast was actually the first time
 I heard it for myself.&lt;/p&gt;
-&lt;p&gt;&lt;img style="float:right" src="http://www.jedludlow.com/images/A_Fast_Car.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style="float:right" src="https://www.jedludlow.com/images/A_Fast_Car.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;I still have my first Pinewood Derby car, the one that took first place
 in my local race. It stays safely packed away in a box and only comes
 out for special occasions. You can guess its age by the &lt;a href="http://en.wikipedia.org/wiki/Pontiac_Firebird"&gt;Firebird&lt;/a&gt;
@@ -300,7 +300,7 @@ weight and place that weight near the rear axle to be a competitor. But
 invariably the fastest cars have ultra low rolling resistance, and they
 &lt;em&gt;track perfectly straight&lt;/em&gt;. No amount of weight fiddling can compensate
 for a car that incurs huge amounts of drag by continually rubbing up
-against the central track guide.&lt;/p&gt;</content><category term="misc"></category><category term="car talk"></category></entry><entry><title>A Quick FFT Example in Python</title><link href="http://www.jedludlow.com/2012/11/a-quick-fft-example-in-python.html" rel="alternate"></link><published>2012-11-19T04:42:00-07:00</published><updated>2012-11-19T04:42:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2012-11-19:/2012/11/a-quick-fft-example-in-python.html</id><summary type="html">&lt;p&gt;Here's a quick &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt; notebook &lt;a href="https://gist.github.com/3919130"&gt;gist&lt;/a&gt; about FFTs in Python.
+against the central track guide.&lt;/p&gt;</content><category term="misc"></category><category term="car talk"></category></entry><entry><title>A Quick FFT Example in Python</title><link href="https://www.jedludlow.com/2012/11/a-quick-fft-example-in-python.html" rel="alternate"></link><published>2012-11-19T04:42:00-07:00</published><updated>2012-11-19T04:42:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2012-11-19:/2012/11/a-quick-fft-example-in-python.html</id><summary type="html">&lt;p&gt;Here's a quick &lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt; notebook &lt;a href="https://gist.github.com/3919130"&gt;gist&lt;/a&gt; about FFTs in Python.
 Ironically, most tutorials don't describe how to scale and format the
 FFT output so that sinusoidal amplitudes are correctly displayed.
 Sometimes that's important. If you don't have IPython installed, the
@@ -310,7 +310,7 @@ Ironically, most tutorials don't describe how to scale and format the
 FFT output so that sinusoidal amplitudes are correctly displayed.
 Sometimes that's important. If you don't have IPython installed, the
 &lt;a href="http://nbviewer.ipython.org/3919130"&gt;notebook can be viewed&lt;/a&gt; using the awesome &lt;a href="http://nbviewer.ipython.org/"&gt;IPython Notebook
-Viewer&lt;/a&gt;.&lt;/p&gt;</content><category term="tech"></category><category term="python"></category></entry><entry><title>A Find Rarer Than Diamonds</title><link href="http://www.jedludlow.com/2012/04/a-find-rarer-than-diamonds.html" rel="alternate"></link><published>2012-04-08T19:16:00-06:00</published><updated>2012-04-08T19:16:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2012-04-08:/2012/04/a-find-rarer-than-diamonds.html</id><summary type="html">&lt;p&gt;So maybe &lt;a href="http://tanzanitefoundation.org/tanzanite_rarity"&gt;diamonds aren't the rarest gemstone&lt;/a&gt;, but I couldn't very
+Viewer&lt;/a&gt;.&lt;/p&gt;</content><category term="tech"></category><category term="python"></category></entry><entry><title>A Find Rarer Than Diamonds</title><link href="https://www.jedludlow.com/2012/04/a-find-rarer-than-diamonds.html" rel="alternate"></link><published>2012-04-08T19:16:00-06:00</published><updated>2012-04-08T19:16:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2012-04-08:/2012/04/a-find-rarer-than-diamonds.html</id><summary type="html">&lt;p&gt;So maybe &lt;a href="http://tanzanitefoundation.org/tanzanite_rarity"&gt;diamonds aren't the rarest gemstone&lt;/a&gt;, but I couldn't very
 well title the post "A Find Rarer Than Tanzanite" and expect anyone to
 understand the idiom.&lt;/p&gt;
 &lt;p&gt;I found a professional athlete who could actually serve as a role model
@@ -342,10 +342,10 @@ was just something I was dumb enough to believe was true. I told the
 Lord 'You redefine what it is that I am now as a man. You tell me who
 A.C. Green is. What people say and what you say are two different
 things and I need to know what it is that you say.'"&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="faith"></category></entry><entry><title>Exporting C++ Classes from a DLL</title><link href="http://www.jedludlow.com/2011/10/exporting-c-classes-from-dll.html" rel="alternate"></link><published>2011-10-13T20:47:00-06:00</published><updated>2011-10-13T20:47:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-10-13:/2011/10/exporting-c-classes-from-dll.html</id><content type="html">&lt;p&gt;Two good articles on exporting C++ classes from a DLL from &lt;a href="http://eli.thegreenplace.net/2011/09/16/exporting-c-classes-from-a-dll/"&gt;Eli
+&lt;/blockquote&gt;</content><category term="faith"></category></entry><entry><title>Exporting C++ Classes from a DLL</title><link href="https://www.jedludlow.com/2011/10/exporting-c-classes-from-dll.html" rel="alternate"></link><published>2011-10-13T20:47:00-06:00</published><updated>2011-10-13T20:47:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-10-13:/2011/10/exporting-c-classes-from-dll.html</id><content type="html">&lt;p&gt;Two good articles on exporting C++ classes from a DLL from &lt;a href="http://eli.thegreenplace.net/2011/09/16/exporting-c-classes-from-a-dll/"&gt;Eli
 Bendersky&lt;/a&gt; and &lt;a href="http://www.codeproject.com/KB/cpp/howto_export_cpp_classes.aspx?fid=1525934&amp;amp;df=90&amp;amp;mpp=25&amp;amp;noise=3&amp;amp;prof=False&amp;amp;sort=Position&amp;amp;view=Quick&amp;amp;fr=26#CppMatureApproach"&gt;Alex Blekhman&lt;/a&gt;. I've researched this before and
 found varying degrees of intelligibility. These seem to be fairly
-complete yet concise.&lt;/p&gt;</content><category term="tech"></category><category term="c/c++"></category></entry><entry><title>We All Better Start Drivin' Prii</title><link href="http://www.jedludlow.com/2011/08/we-all-better-start-drivin-prii.html" rel="alternate"></link><published>2011-08-02T19:19:00-06:00</published><updated>2011-08-02T19:19:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-08-02:/2011/08/we-all-better-start-drivin-prii.html</id><summary type="html">&lt;p&gt;Thanks to this week's &lt;a href="http://www.cartalk.com/content/1131-love-and-rust-spots"&gt;Car Talk&lt;/a&gt; for this musical gem: "Sure as cactus
+complete yet concise.&lt;/p&gt;</content><category term="tech"></category><category term="c/c++"></category></entry><entry><title>We All Better Start Drivin' Prii</title><link href="https://www.jedludlow.com/2011/08/we-all-better-start-drivin-prii.html" rel="alternate"></link><published>2011-08-02T19:19:00-06:00</published><updated>2011-08-02T19:19:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-08-02:/2011/08/we-all-better-start-drivin-prii.html</id><summary type="html">&lt;p&gt;Thanks to this week's &lt;a href="http://www.cartalk.com/content/1131-love-and-rust-spots"&gt;Car Talk&lt;/a&gt; for this musical gem: "Sure as cactus
 is cacti and fungus is fungi, we all better start drivin' &lt;a href="http://en.wikipedia.org/wiki/Toyota_Prius"&gt;Prii&lt;/a&gt;
 ...."  &lt;/p&gt;
 &lt;p&gt;Download a short clip: &lt;a href="https://docs.google.com/open?id=0B3nVh47y-YENYTBkYTVkMmMtYmQ0Ny00ODViLWE5ZjgtNGI3M2Y2ZWM0N2Nh"&gt;We All Better Start Drivin' Prii&lt;/a&gt;  &lt;/p&gt;
@@ -358,7 +358,7 @@ is cacti and fungus is fungi, we all better start drivin' &lt;a href="http://en.
 the public had selected the plural of Prius to be Prii. But I can't help
 but wonder if the whole campaign got kicked off when one of the Toyota
 marketing guys was watching &lt;a href="http://en.wikiquote.org/wiki/Brian_Regan#From_Brian_Regan_Live:_Stupid_in_School_.5B1.5D"&gt;Brian Regan's Stupid in School&lt;/a&gt; sketch
-and thought to himself, "Hey, what if ...."&lt;/p&gt;</content><category term="misc"></category><category term="car talk"></category></entry><entry><title>Bob Pease Killed in Car Crash</title><link href="http://www.jedludlow.com/2011/07/bob-pease-killed-in-car-crash.html" rel="alternate"></link><published>2011-07-20T06:49:00-06:00</published><updated>2011-07-20T06:49:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-07-20:/2011/07/bob-pease-killed-in-car-crash.html</id><summary type="html">&lt;p&gt;&lt;a href="http://edn.com/electronics-blogs/readerschoice/4368147/Analog-engineering-legend-Bob-Pease-killed-in-car-crash"&gt;Analog engineering legend Bob Pease killed in car crash&lt;/a&gt;  &lt;/p&gt;
+and thought to himself, "Hey, what if ...."&lt;/p&gt;</content><category term="misc"></category><category term="car talk"></category></entry><entry><title>Bob Pease Killed in Car Crash</title><link href="https://www.jedludlow.com/2011/07/bob-pease-killed-in-car-crash.html" rel="alternate"></link><published>2011-07-20T06:49:00-06:00</published><updated>2011-07-20T06:49:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-07-20:/2011/07/bob-pease-killed-in-car-crash.html</id><summary type="html">&lt;p&gt;&lt;a href="http://edn.com/electronics-blogs/readerschoice/4368147/Analog-engineering-legend-Bob-Pease-killed-in-car-crash"&gt;Analog engineering legend Bob Pease killed in car crash&lt;/a&gt;  &lt;/p&gt;
 &lt;p&gt;As a university student I took a job in an &lt;em&gt;electronics&lt;/em&gt; lab while
 studying &lt;em&gt;mechanical&lt;/em&gt; engineering. I guess the job required that you
 could solder &lt;em&gt;and&lt;/em&gt; do a little metalworking, so I qualified on the latter
@@ -377,7 +377,7 @@ grasp his articles on &lt;a href="https://www.google.com/search?q=bob+pease+fuzz
 studied enough control systems to make the discussion relevant. At the
 time, analog implementations for compensators were considered
 yesterday's news by academia. Bob showed us that they were as relevant
-as they ever were.&lt;/p&gt;</content><category term="tech"></category><category term="embedded"></category></entry><entry><title>On Jean Labrosse's Coding Style</title><link href="http://www.jedludlow.com/2011/06/on-jean-labrosses-coding-style.html" rel="alternate"></link><published>2011-06-03T04:43:00-06:00</published><updated>2011-06-03T04:43:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-06-03:/2011/06/on-jean-labrosses-coding-style.html</id><summary type="html">&lt;blockquote&gt;
+as they ever were.&lt;/p&gt;</content><category term="tech"></category><category term="embedded"></category></entry><entry><title>On Jean Labrosse's Coding Style</title><link href="https://www.jedludlow.com/2011/06/on-jean-labrosses-coding-style.html" rel="alternate"></link><published>2011-06-03T04:43:00-06:00</published><updated>2011-06-03T04:43:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-06-03:/2011/06/on-jean-labrosses-coding-style.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;The words or the language, as they are written or spoken, do not seem
 to play any role in my mechanism of thought. The psychical entities
 which seem to serve as elements in thought are certain signs and more
@@ -423,7 +423,7 @@ look closer at Mr. Labrosse's conventions, I see a set of rules that
 allow him to create a richer &lt;em&gt;reading&lt;/em&gt; experience for himself, each
 construct seeded with clues about how it fits into the larger system,
 assisting him to reconstruct the "clear images" in his mind each time he
-returns to the code. That sounds like "good practice" to me.&lt;/p&gt;</content><category term="tech"></category><category term="c/c++"></category><category term="embedded"></category></entry><entry><title>Wrapping C++ in a C Interface</title><link href="http://www.jedludlow.com/2011/01/this-is-perhaps-simplest-slickest-way.html" rel="alternate"></link><published>2011-01-22T14:49:00-07:00</published><updated>2011-01-22T14:49:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-01-22:/2011/01/this-is-perhaps-simplest-slickest-way.html</id><summary type="html">&lt;p&gt;This is perhaps the simplest, slickest way to wrap C++ in a C interface
+returns to the code. That sounds like "good practice" to me.&lt;/p&gt;</content><category term="tech"></category><category term="c/c++"></category><category term="embedded"></category></entry><entry><title>Wrapping C++ in a C Interface</title><link href="https://www.jedludlow.com/2011/01/this-is-perhaps-simplest-slickest-way.html" rel="alternate"></link><published>2011-01-22T14:49:00-07:00</published><updated>2011-01-22T14:49:00-07:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2011-01-22:/2011/01/this-is-perhaps-simplest-slickest-way.html</id><summary type="html">&lt;p&gt;This is perhaps the simplest, slickest way to wrap C++ in a C interface
 I've ever seen, &lt;a href="http://matt.eifelle.com/2010/12/09/wrapping-a-c-class-in-c/"&gt;courtesy of Matthieu Brucher&lt;/a&gt;. The key concept is the
 forward declaration of the Manager type, which is valid for both C++ and
 C. Any C that attaches to this interface doesn't have to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is perhaps the simplest, slickest way to wrap C++ in a C interface
