@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.jedludlow.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://www.jedludlow.com/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://www.jedludlow.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://www.jedludlow.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://www.jedludlow.com/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://www.jedludlow.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Jed Ludlow Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-28031504-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="Jed Ludlow" />
+<meta name="description" content="&#34;The purpose of computing is insight, not numbers.&#34; (Richard Hamming) &#34;The reason we model and analyze systems is to gain insight.&#34; (C. Nelson Dorny) At the beginning of April, with the COVID-19 outbreak upending much of life as we previously knew it, I was casually following the case count numbers …" />
+<meta name="keywords" content="data science, control systems">
+
+
+<meta property="og:site_name" content="Jed Ludlow"/>
+<meta property="og:title" content="In Search of Models that Yield Insight"/>
+<meta property="og:description" content="&#34;The purpose of computing is insight, not numbers.&#34; (Richard Hamming) &#34;The reason we model and analyze systems is to gain insight.&#34; (C. Nelson Dorny) At the beginning of April, with the COVID-19 outbreak upending much of life as we previously knew it, I was casually following the case count numbers …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://www.jedludlow.com/2020/10/in-search-of-models-that-yield-insight.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-10-10 13:00:00-06:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://www.jedludlow.com/author/jed-ludlow.html">
+<meta property="article:section" content="tech"/>
+<meta property="article:tag" content="data science"/>
+<meta property="article:tag" content="control systems"/>
+<meta property="og:image" content="https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80">
+
+  <title>Jed Ludlow &ndash; In Search of Models that Yield Insight</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://www.jedludlow.com">
+        <img src="https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80" alt="Jed Ludlow" title="Jed Ludlow">
+      </a>
+
+      <h1>
+        <a href="https://www.jedludlow.com">Jed Ludlow</a>
+      </h1>
+
+<p>Multidisciplinary Engineer</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://www.jedludlow.com/pages/about.html#about">
+                  about
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-envelope" href="mailto:info@jedludlow.com" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/jedludlow" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/jedludlow" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-rss" href="http://www.jedludlow.com/feeds/all.atom.xml" target="_blank">
+              <i class="fas fa-rss"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://www.jedludlow.com">Home</a>
+
+      <a href="https://www.jedludlow.com/archives.html">Archives</a>
+      <a href="https://www.jedludlow.com/categories.html">Categories</a>
+      <a href="https://www.jedludlow.com/tags.html">Tags</a>
+
+      <a href="https://www.jedludlow.com/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="in-search-of-models-that-yield-insight">In Search of Models that Yield Insight</h1>
+    <p>
+      Posted on Sat 10 October 2020 in <a href="https://www.jedludlow.com/category/tech.html">tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p><em>"The purpose of computing is insight, not numbers." (Richard Hamming)</em></p>
+<p><em>"The reason we model and analyze systems is to gain insight." <a href="https://books.google.com/books/about/Understanding_dynamic_systems.html?id=wnxRAAAAMAAJ">(C. Nelson Dorny)</a></em></p>
+<p>At the beginning of April, with the COVID-19 outbreak upending much of life
+as we previously knew it, I was casually following the case count numbers
+from various sources. I eventually gave in to the urge to start tinkering
+with visualizations and started plotting the data from my home state of Utah. I originally
+took inspiration from <a href="https://hairysun.com/">Matt Harrison's</a> daily <a href="https://www.linkedin.com/posts/panela_covid19-testkits-actlocal-activity-6651667546774867968-L7Lq">plots of
+the data on LinkedIn</a>, but I ultimately ended up taking a different route to the visualizations
+that was geared toward examining the commonality in the shape of the growth curves
+and the phase relationships
+between the various reported
+statistics. I've since been updating the plots daily and
+<a href="https://github.com/jedludlow/covid-19">storing the snapshots to GitHub</a>. An example snapshot from a typical day is below.</p>
+<p><hr>
+<img src="https://www.jedludlow.com/images/covid_multiple_y_axes.png" width="600" />
+<br>
+<em>Utah COVID-19 data. <a href="https://github.com/jedludlow/covid-19">(Source)</a></em>
+<hr>
+<img src="https://www.jedludlow.com/images/covid_multiple_log_y_axes.png" width="600" />
+<br>
+<em>Utah COVID-19 data, log scale. <a href="https://github.com/jedludlow/covid-19">(Source)</a></em>
+<hr>
+<img src="https://www.jedludlow.com/images/covid_daily_increments_multiple_y_axes.png" width="600" />
+<br>
+<em>Utah COVID-19 data, seven-day running average of daily case increments. <a href="https://github.com/jedludlow/covid-19">(Source)</a></em>
+<hr></p>
+<p>While the underlying case count data are admittedly an approximate proxy
+for the true state of the pandemic, the plots offer at least some insights into
+the progression over time. The plot with linear y axis is remarkable in demonstrating
+how closely the various metrics track each other in terms of shape. The plot with logarithmic
+y axis is useful for monitoring the effective exponential growth rate over time.
+On a logarithmic y axis, exponential growth at a fixed rate would show up
+as a straight line. The very steep apparent growth in late March slowed significantly
+during April, and the data for the end of May and through June 
+looks pretty linear (on the log scale plot),
+indicating relatively consistent exponential growth now
+albeit at a much reduced rate than March. September shows strong growth again.
+The seven-day moving average of daily totals is admittedly busy, but the phase
+relationship between the various statistics is much easier to see this way.
+The inclusion of public health directives
+helps provide some context to changes in the shapes of the curves.</p>
+<p>After working the visualization problem for a few days, I began to wonder about
+how others were building models using this data to develop projections. Surely
+that kind of information would be super helpful for public health officials. That's where
+things got really interesting.</p>
+<h2>"No Confidence" in the Confidence Bounds</h2>
+<p>I've been following <a href="https://statmodeling.stat.columbia.edu/">Andrew Gelman's blog</a> for a handful of years now.
+It acts as a unique collection point for a variety of interesting statistical questions,
+and, even if I don't always fully appreciate the technicalities of some of the arguments,
+the general exposure to the way Bayesian statisticians think about problems
+has been educational. In the middle part of April, there was a discussion that
+came up around two modeling groups that were publishing COVID-19 projections 
+with <a href="https://statmodeling.stat.columbia.edu/2020/04/21/new-coronavirus-forecasting-model/">wildly different shapes to the confidence bounds</a>.
+I've reproduced a couple of the plots below.</p>
+<p><hr>
+<img src="https://www.jedludlow.com/images/covid_deaths_per_day_u_of_t.png" width="500" />
+<br>
+<em><a href="https://covid-19.tacc.utexas.edu/projections/">University of Texas COVID-19</a> projected deaths per day.
+Note the quickly diverging confidence bounds. <a href="https://statmodeling.stat.columbia.edu/2020/04/21/new-coronavirus-forecasting-model/">(Source)</a></em>
+ <hr>
+<img src="https://www.jedludlow.com/images/covid_deaths_per_day_imhe.png" width="500" />
+<br>
+<em><a href="https://covid19.healthdata.org/united-states-of-america">IHME COVID-19</a> projected deaths per day.
+Note the quickly converging confidence bounds. <a href="https://statmodeling.stat.columbia.edu/2020/04/21/new-coronavirus-forecasting-model/">(Source)</a></em>
+<hr></p>
+<p>If you can take any insight from these models it might be that
+projections from these types of models, especially so early in the progression
+of a pandemic, are incredibly uncertain. They depend heavily on assumptions
+about how previous pandemics have behaved, and there is no simple way to validate
+those assumptions with an unfamiliar disease in our modern societal context.</p>
+<p>As far as facilitating informed decision making, the hope that
+statistical models like these might produce useful guidance seems dim. In that
+light, is there another type of model that might serve us better? From a
+policymaker's perspective, a pandemic like this gets managed day-to-day
+on little bits of new information, and decisions are executed with some
+risk that we are simply doing the wrong thing today which we won't discover
+until some later date. From that description, it might be more suitable to think
+about this as a
+problem in learning how to control a system with uncertain dynamics.</p>
+<h2>Controlling Systems with Uncertain Dynamics</h2>
+<p>I remember reading David McCullough's <a href="https://www.simonandschuster.com/books/The-Wright-Brothers/David-McCullough/9781476728759">biography of the Wright brothers</a>,
+which is loaded with insights into the genius of the two brothers.
+They were absolutely convinced
+that a critical piece of success in achieving flight would be to
+<em>learn how to fly an aircraft</em>. Engineering a machine that was capable of flight
+would not be enough because keeping such a machine aloft would require its own set
+of skills. Wilbur Wright once compared the process to that of learning to
+ride a horse. He contrasted two methods:</p>
+<blockquote>
+<p>One is to get on him and learn by actual practice how each motion and trick may be best met;
+the other is to sit on a fence and watch the beast a while, and then retire to the house
+and at leisure figure out the best way of overcoming his jumps and kicks. The latter system
+is the safest, but the former, on the whole, turns out the larger proportion of good riders.</p>
+</blockquote>
+<p>Coming back to flying, he emphasized the need for practical experience behind the controls.</p>
+<blockquote>
+<p>But if you really wish to learn, you must mount a machine and become acquainted with its tricks by actual trial.</p>
+</blockquote>
+<p>There would be no substitute
+for getting behind the controls and coming to grips with the reality that at first you don't
+know how much to move the levers at your disposal, how much was too much, how much was too little.
+The brothers together came up with a series of progressively more complex demonstration activities
+that allowed them to <em>learn the dynamics of an unfamiliar aircraft system</em> and <em>develop the appropriate control reactions</em> to keep it aloft.</p>
+<p>In a pandemic, what are the controls available to us? Mask mandates, gathering
+restrictions, border shut-downs, stay-at-home orders, and quarantine periods
+are typical examples, each with some impact on both public health and economic
+outputs, the magnitude of which will not be well understood at first. In the
+face of this uncertainty, one strategy is to establish a safe steady-state
+operating point and then issue small changes on these control inputs to
+observe the system outputs in response. We've all experienced this first hand
+over the last several months, beginning with strict lock-downs to establish a
+safe operating point from a public health perspective followed by progressive
+re-opening plans and miscellaneous tweaking of restrictions and mandates in an
+attempt to restore economic progress.</p>
+<p>In principle, this strategy seems so straightforward. In practice, it
+is incredibly difficult to execute well because the system we are dealing
+with in a pandemic has dynamics which are especially challenging to our human
+psychology. We are impatient. We don't like to wait. Furthermore, we expect
+our control actions to make a noticeable effect on outputs in a relatively
+short time window. In short, we are really bad at dealing with delay.</p>
+<h2>Feedback Systems with Time Delay</h2>
+<p>An exposure to the virus today will not yield a lab test result until many days later,
+and there are multiple points of delay in that chain of events. Exposure to symptoms,
+symptoms to lab test, lab test to results—these all accumulate into a very large delay
+between infection and detection. This delay has enormous practical consequences on
+our ability to exert control by feedback mechanisms.</p>
+<p>Without delving deeply into control system theory, I'll simply state
+that <em>delay pushes
+feedback systems toward instability</em>. It causes systems with feedback loops
+to overshoot and oscillate around their desired targets.</p>
+<p>A simple example from thermal systems illustrates the significant human weakness
+at dealing with slowly varying systems with built in delay. A
+classic experiment from Dörner's <a href="https://lccn.loc.gov/96010986">The Logic of Failure</a> demonstrates this.
+The experiment involves human participants interacting with a simulated
+refrigeration system. He describes the premise of the experiment this way:</p>
+<blockquote>
+<p>Imagine that you are the manager of a supermarket. One evening the janitor
+calls you up and tells you that the refrigeration system in the storeroom
+for diary products appears to have broken down. Large quantities of milk
+and milk products are in danger of spoiling. You rush to the store, where
+the janitor tells you he has already contacted company headquarters. They
+have dispatched refrigerator trucks to pick up the perishable goods, but
+it will take several hours for the trucks to arrive. Until they do, the
+perishables have to be kept from spoiling.</p>
+<p>You find that the defective refrigeration system is equipped with a
+regulator and a thermometer. The regulator is still operational and can
+be used to influence the climate-control system and thus the temperature
+in the storeroom. However, the numbers on the regulator do not correspond
+to those on the thermometer. In general, a high regulator setting means
+a high temperature; a low setting, a low temperature. But you do not know
+what the exact relationship is between the regulator and the cooling system,
+and you have to find out what it is. The regulator has a range of settings
+between 0 and 200.</p>
+</blockquote>
+<p>Participants were told to adjust the regulator setting to target a stable
+temperature of 4 degrees Celsius in the storeroom. Like real refrigeration
+systems, this simulated system had significant time lag between the moment
+that the regulator setting was changed and the time at which
+resulting temperature changes became apparent.</p>
+<p>The plots below are
+a sampling of the performance from four participants. I won't attempt to
+review all of the implications here, but it's worth noting the enormous
+difference in performance between the very successful top participant and
+the completely erratic bottom participant. Dörner's analysis
+of the psychology at play in the various participants is worth reading, so
+consult the book for a full discussion.
+Of particular note is how the top performer made <em>only small adjustments
+to the regulator setting at each change and them waited for quite some
+time to allow the system to respond before making new adjustments</em>.
+Eventually the oscillations died out, and a relatively steady downward
+ramp toward the target resulted. In contrast,
+the bottom performer demonstrated rapid adjustments to the regulator, going
+from extreme to extreme or even reissuing the same extreme command multiple
+times. The result was sustained oscillations, never converging on the target.</p>
+<p><hr>
+<img src="https://www.jedludlow.com/images/cold_storeroom_plots.jpg" width="500" />
+<br>
+<em>Plot of various participants' performance on the refrigerated storage room
+simulation experiment, from <a href="https://lccn.loc.gov/96010986">The Logic of Failure</a>, p. 132. Solid lines
+represent storage room temperature readings (degrees C). Triangles represent
+regulator settings issued by the participants (unspecified units). The x axis
+is time (minutes).</em>
+<hr></p>
+<h2>Conclusions</h2>
+<p>From a policymaker's perspective, it feels like statistical models that attempt
+to project long-term pandemic trajectories are less helpful
+for managing the day-to-day decision making that must occur. It seems like
+more insight comes from thinking
+about a pandemic as an uncertain dynamic system, an unfamiliar aircraft that
+is <em>already in flight</em>, a malfunctioning refrigeration system that <em>must remain 
+in operation</em>.</p>
+<p>Pandemics have inherent delay in their dynamics, which complicates the system
+identification problem.
+To adequately learn the dynamics of a system with delay takes a <em>long</em> time because
+you have to make <em>small control changes</em> and then <em>wait a long time</em> for the
+oscillations to settle before making conclusions about the output. If
+you get impatient and make control perturbations that are too large you create disturbances
+that take a long time to settle out, you never really learn anything, and you
+risk destabilizing the system entirely.</p>
+<p>As Dörner showed us, some humans are particularly adept at controlling systems
+with delay, and others are uniquely bad at it. I guess we can only hope
+that during a pandemic a handful of the adept are in positions that
+influence public health and economic policy.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://www.jedludlow.com/tag/data-science.html">data science</a>
+      <a href="https://www.jedludlow.com/tag/control-systems.html">control systems</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jedludlow';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2011-2020 Jed Ludlow. All rights reserved.</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jed Ludlow ",
+  "url" : "https://www.jedludlow.com",
+  "image": "https://s.gravatar.com/avatar/9b4a9d0338a968a8f66d8e62ba3f651c?s=80",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>

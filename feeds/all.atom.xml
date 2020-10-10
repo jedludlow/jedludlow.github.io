@@ -1,5 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jed Ludlow</title><link href="https://www.jedludlow.com/" rel="alternate"></link><link href="https://www.jedludlow.com/feeds/all.atom.xml" rel="self"></link><id>https://www.jedludlow.com/</id><updated>2015-03-14T12:15:00-06:00</updated><subtitle>Multidisciplinary Engineer</subtitle><entry><title>Utah Code Camp 2015</title><link href="https://www.jedludlow.com/2015/03/ucc-2015.html" rel="alternate"></link><published>2015-03-14T12:15:00-06:00</published><updated>2015-03-14T12:15:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2015-03-14:/2015/03/ucc-2015.html</id><summary type="html">&lt;p&gt;I presented at Utah Code Camp 2015 on machine learning
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jed Ludlow</title><link href="https://www.jedludlow.com/" rel="alternate"></link><link href="https://www.jedludlow.com/feeds/all.atom.xml" rel="self"></link><id>https://www.jedludlow.com/</id><updated>2020-10-10T13:00:00-06:00</updated><subtitle>Multidisciplinary Engineer</subtitle><entry><title>In Search of Models that Yield Insight</title><link href="https://www.jedludlow.com/2020/10/in-search-of-models-that-yield-insight.html" rel="alternate"></link><published>2020-10-10T13:00:00-06:00</published><updated>2020-10-10T13:00:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2020-10-10:/2020/10/in-search-of-models-that-yield-insight.html</id><summary type="html">&lt;p&gt;&lt;em&gt;"The purpose of computing is insight, not numbers." (Richard Hamming)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;"The reason we model and analyze systems is to gain insight." &lt;a href="https://books.google.com/books/about/Understanding_dynamic_systems.html?id=wnxRAAAAMAAJ"&gt;(C. Nelson Dorny)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;At the beginning of April, with the COVID-19 outbreak upending much of life
+as we previously knew it, I was casually following the case count numbers …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;"The purpose of computing is insight, not numbers." (Richard Hamming)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;"The reason we model and analyze systems is to gain insight." &lt;a href="https://books.google.com/books/about/Understanding_dynamic_systems.html?id=wnxRAAAAMAAJ"&gt;(C. Nelson Dorny)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;At the beginning of April, with the COVID-19 outbreak upending much of life
+as we previously knew it, I was casually following the case count numbers
+from various sources. I eventually gave in to the urge to start tinkering
+with visualizations and started plotting the data from my home state of Utah. I originally
+took inspiration from &lt;a href="https://hairysun.com/"&gt;Matt Harrison's&lt;/a&gt; daily &lt;a href="https://www.linkedin.com/posts/panela_covid19-testkits-actlocal-activity-6651667546774867968-L7Lq"&gt;plots of
+the data on LinkedIn&lt;/a&gt;, but I ultimately ended up taking a different route to the visualizations
+that was geared toward examining the commonality in the shape of the growth curves
+and the phase relationships
+between the various reported
+statistics. I've since been updating the plots daily and
+&lt;a href="https://github.com/jedludlow/covid-19"&gt;storing the snapshots to GitHub&lt;/a&gt;. An example snapshot from a typical day is below.&lt;/p&gt;
+&lt;p&gt;&lt;hr&gt;
+&lt;img src="https://www.jedludlow.com/images/covid_multiple_y_axes.png" width="600" /&gt;
+&lt;br&gt;
+&lt;em&gt;Utah COVID-19 data. &lt;a href="https://github.com/jedludlow/covid-19"&gt;(Source)&lt;/a&gt;&lt;/em&gt;
+&lt;hr&gt;
+&lt;img src="https://www.jedludlow.com/images/covid_multiple_log_y_axes.png" width="600" /&gt;
+&lt;br&gt;
+&lt;em&gt;Utah COVID-19 data, log scale. &lt;a href="https://github.com/jedludlow/covid-19"&gt;(Source)&lt;/a&gt;&lt;/em&gt;
+&lt;hr&gt;
+&lt;img src="https://www.jedludlow.com/images/covid_daily_increments_multiple_y_axes.png" width="600" /&gt;
+&lt;br&gt;
+&lt;em&gt;Utah COVID-19 data, seven-day running average of daily case increments. &lt;a href="https://github.com/jedludlow/covid-19"&gt;(Source)&lt;/a&gt;&lt;/em&gt;
+&lt;hr&gt;&lt;/p&gt;
+&lt;p&gt;While the underlying case count data are admittedly an approximate proxy
+for the true state of the pandemic, the plots offer at least some insights into
+the progression over time. The plot with linear y axis is remarkable in demonstrating
+how closely the various metrics track each other in terms of shape. The plot with logarithmic
+y axis is useful for monitoring the effective exponential growth rate over time.
+On a logarithmic y axis, exponential growth at a fixed rate would show up
+as a straight line. The very steep apparent growth in late March slowed significantly
+during April, and the data for the end of May and through June 
+looks pretty linear (on the log scale plot),
+indicating relatively consistent exponential growth now
+albeit at a much reduced rate than March. September shows strong growth again.
+The seven-day moving average of daily totals is admittedly busy, but the phase
+relationship between the various statistics is much easier to see this way.
+The inclusion of public health directives
+helps provide some context to changes in the shapes of the curves.&lt;/p&gt;
+&lt;p&gt;After working the visualization problem for a few days, I began to wonder about
+how others were building models using this data to develop projections. Surely
+that kind of information would be super helpful for public health officials. That's where
+things got really interesting.&lt;/p&gt;
+&lt;h2&gt;"No Confidence" in the Confidence Bounds&lt;/h2&gt;
+&lt;p&gt;I've been following &lt;a href="https://statmodeling.stat.columbia.edu/"&gt;Andrew Gelman's blog&lt;/a&gt; for a handful of years now.
+It acts as a unique collection point for a variety of interesting statistical questions,
+and, even if I don't always fully appreciate the technicalities of some of the arguments,
+the general exposure to the way Bayesian statisticians think about problems
+has been educational. In the middle part of April, there was a discussion that
+came up around two modeling groups that were publishing COVID-19 projections 
+with &lt;a href="https://statmodeling.stat.columbia.edu/2020/04/21/new-coronavirus-forecasting-model/"&gt;wildly different shapes to the confidence bounds&lt;/a&gt;.
+I've reproduced a couple of the plots below.&lt;/p&gt;
+&lt;p&gt;&lt;hr&gt;
+&lt;img src="https://www.jedludlow.com/images/covid_deaths_per_day_u_of_t.png" width="500" /&gt;
+&lt;br&gt;
+&lt;em&gt;&lt;a href="https://covid-19.tacc.utexas.edu/projections/"&gt;University of Texas COVID-19&lt;/a&gt; projected deaths per day.
+Note the quickly diverging confidence bounds. &lt;a href="https://statmodeling.stat.columbia.edu/2020/04/21/new-coronavirus-forecasting-model/"&gt;(Source)&lt;/a&gt;&lt;/em&gt;
+ &lt;hr&gt;
+&lt;img src="https://www.jedludlow.com/images/covid_deaths_per_day_imhe.png" width="500" /&gt;
+&lt;br&gt;
+&lt;em&gt;&lt;a href="https://covid19.healthdata.org/united-states-of-america"&gt;IHME COVID-19&lt;/a&gt; projected deaths per day.
+Note the quickly converging confidence bounds. &lt;a href="https://statmodeling.stat.columbia.edu/2020/04/21/new-coronavirus-forecasting-model/"&gt;(Source)&lt;/a&gt;&lt;/em&gt;
+&lt;hr&gt;&lt;/p&gt;
+&lt;p&gt;If you can take any insight from these models it might be that
+projections from these types of models, especially so early in the progression
+of a pandemic, are incredibly uncertain. They depend heavily on assumptions
+about how previous pandemics have behaved, and there is no simple way to validate
+those assumptions with an unfamiliar disease in our modern societal context.&lt;/p&gt;
+&lt;p&gt;As far as facilitating informed decision making, the hope that
+statistical models like these might produce useful guidance seems dim. In that
+light, is there another type of model that might serve us better? From a
+policymaker's perspective, a pandemic like this gets managed day-to-day
+on little bits of new information, and decisions are executed with some
+risk that we are simply doing the wrong thing today which we won't discover
+until some later date. From that description, it might be more suitable to think
+about this as a
+problem in learning how to control a system with uncertain dynamics.&lt;/p&gt;
+&lt;h2&gt;Controlling Systems with Uncertain Dynamics&lt;/h2&gt;
+&lt;p&gt;I remember reading David McCullough's &lt;a href="https://www.simonandschuster.com/books/The-Wright-Brothers/David-McCullough/9781476728759"&gt;biography of the Wright brothers&lt;/a&gt;,
+which is loaded with insights into the genius of the two brothers.
+They were absolutely convinced
+that a critical piece of success in achieving flight would be to
+&lt;em&gt;learn how to fly an aircraft&lt;/em&gt;. Engineering a machine that was capable of flight
+would not be enough because keeping such a machine aloft would require its own set
+of skills. Wilbur Wright once compared the process to that of learning to
+ride a horse. He contrasted two methods:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One is to get on him and learn by actual practice how each motion and trick may be best met;
+the other is to sit on a fence and watch the beast a while, and then retire to the house
+and at leisure figure out the best way of overcoming his jumps and kicks. The latter system
+is the safest, but the former, on the whole, turns out the larger proportion of good riders.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Coming back to flying, he emphasized the need for practical experience behind the controls.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;But if you really wish to learn, you must mount a machine and become acquainted with its tricks by actual trial.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There would be no substitute
+for getting behind the controls and coming to grips with the reality that at first you don't
+know how much to move the levers at your disposal, how much was too much, how much was too little.
+The brothers together came up with a series of progressively more complex demonstration activities
+that allowed them to &lt;em&gt;learn the dynamics of an unfamiliar aircraft system&lt;/em&gt; and &lt;em&gt;develop the appropriate control reactions&lt;/em&gt; to keep it aloft.&lt;/p&gt;
+&lt;p&gt;In a pandemic, what are the controls available to us? Mask mandates, gathering
+restrictions, border shut-downs, stay-at-home orders, and quarantine periods
+are typical examples, each with some impact on both public health and economic
+outputs, the magnitude of which will not be well understood at first. In the
+face of this uncertainty, one strategy is to establish a safe steady-state
+operating point and then issue small changes on these control inputs to
+observe the system outputs in response. We've all experienced this first hand
+over the last several months, beginning with strict lock-downs to establish a
+safe operating point from a public health perspective followed by progressive
+re-opening plans and miscellaneous tweaking of restrictions and mandates in an
+attempt to restore economic progress.&lt;/p&gt;
+&lt;p&gt;In principle, this strategy seems so straightforward. In practice, it
+is incredibly difficult to execute well because the system we are dealing
+with in a pandemic has dynamics which are especially challenging to our human
+psychology. We are impatient. We don't like to wait. Furthermore, we expect
+our control actions to make a noticeable effect on outputs in a relatively
+short time window. In short, we are really bad at dealing with delay.&lt;/p&gt;
+&lt;h2&gt;Feedback Systems with Time Delay&lt;/h2&gt;
+&lt;p&gt;An exposure to the virus today will not yield a lab test result until many days later,
+and there are multiple points of delay in that chain of events. Exposure to symptoms,
+symptoms to lab test, lab test to results—these all accumulate into a very large delay
+between infection and detection. This delay has enormous practical consequences on
+our ability to exert control by feedback mechanisms.&lt;/p&gt;
+&lt;p&gt;Without delving deeply into control system theory, I'll simply state
+that &lt;em&gt;delay pushes
+feedback systems toward instability&lt;/em&gt;. It causes systems with feedback loops
+to overshoot and oscillate around their desired targets.&lt;/p&gt;
+&lt;p&gt;A simple example from thermal systems illustrates the significant human weakness
+at dealing with slowly varying systems with built in delay. A
+classic experiment from Dörner's &lt;a href="https://lccn.loc.gov/96010986"&gt;The Logic of Failure&lt;/a&gt; demonstrates this.
+The experiment involves human participants interacting with a simulated
+refrigeration system. He describes the premise of the experiment this way:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Imagine that you are the manager of a supermarket. One evening the janitor
+calls you up and tells you that the refrigeration system in the storeroom
+for diary products appears to have broken down. Large quantities of milk
+and milk products are in danger of spoiling. You rush to the store, where
+the janitor tells you he has already contacted company headquarters. They
+have dispatched refrigerator trucks to pick up the perishable goods, but
+it will take several hours for the trucks to arrive. Until they do, the
+perishables have to be kept from spoiling.&lt;/p&gt;
+&lt;p&gt;You find that the defective refrigeration system is equipped with a
+regulator and a thermometer. The regulator is still operational and can
+be used to influence the climate-control system and thus the temperature
+in the storeroom. However, the numbers on the regulator do not correspond
+to those on the thermometer. In general, a high regulator setting means
+a high temperature; a low setting, a low temperature. But you do not know
+what the exact relationship is between the regulator and the cooling system,
+and you have to find out what it is. The regulator has a range of settings
+between 0 and 200.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Participants were told to adjust the regulator setting to target a stable
+temperature of 4 degrees Celsius in the storeroom. Like real refrigeration
+systems, this simulated system had significant time lag between the moment
+that the regulator setting was changed and the time at which
+resulting temperature changes became apparent.&lt;/p&gt;
+&lt;p&gt;The plots below are
+a sampling of the performance from four participants. I won't attempt to
+review all of the implications here, but it's worth noting the enormous
+difference in performance between the very successful top participant and
+the completely erratic bottom participant. Dörner's analysis
+of the psychology at play in the various participants is worth reading, so
+consult the book for a full discussion.
+Of particular note is how the top performer made &lt;em&gt;only small adjustments
+to the regulator setting at each change and them waited for quite some
+time to allow the system to respond before making new adjustments&lt;/em&gt;.
+Eventually the oscillations died out, and a relatively steady downward
+ramp toward the target resulted. In contrast,
+the bottom performer demonstrated rapid adjustments to the regulator, going
+from extreme to extreme or even reissuing the same extreme command multiple
+times. The result was sustained oscillations, never converging on the target.&lt;/p&gt;
+&lt;p&gt;&lt;hr&gt;
+&lt;img src="https://www.jedludlow.com/images/cold_storeroom_plots.jpg" width="500" /&gt;
+&lt;br&gt;
+&lt;em&gt;Plot of various participants' performance on the refrigerated storage room
+simulation experiment, from &lt;a href="https://lccn.loc.gov/96010986"&gt;The Logic of Failure&lt;/a&gt;, p. 132. Solid lines
+represent storage room temperature readings (degrees C). Triangles represent
+regulator settings issued by the participants (unspecified units). The x axis
+is time (minutes).&lt;/em&gt;
+&lt;hr&gt;&lt;/p&gt;
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;From a policymaker's perspective, it feels like statistical models that attempt
+to project long-term pandemic trajectories are less helpful
+for managing the day-to-day decision making that must occur. It seems like
+more insight comes from thinking
+about a pandemic as an uncertain dynamic system, an unfamiliar aircraft that
+is &lt;em&gt;already in flight&lt;/em&gt;, a malfunctioning refrigeration system that &lt;em&gt;must remain 
+in operation&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Pandemics have inherent delay in their dynamics, which complicates the system
+identification problem.
+To adequately learn the dynamics of a system with delay takes a &lt;em&gt;long&lt;/em&gt; time because
+you have to make &lt;em&gt;small control changes&lt;/em&gt; and then &lt;em&gt;wait a long time&lt;/em&gt; for the
+oscillations to settle before making conclusions about the output. If
+you get impatient and make control perturbations that are too large you create disturbances
+that take a long time to settle out, you never really learn anything, and you
+risk destabilizing the system entirely.&lt;/p&gt;
+&lt;p&gt;As Dörner showed us, some humans are particularly adept at controlling systems
+with delay, and others are uniquely bad at it. I guess we can only hope
+that during a pandemic a handful of the adept are in positions that
+influence public health and economic policy.&lt;/p&gt;</content><category term="tech"></category><category term="data science"></category><category term="control systems"></category></entry><entry><title>Utah Code Camp 2015</title><link href="https://www.jedludlow.com/2015/03/ucc-2015.html" rel="alternate"></link><published>2015-03-14T12:15:00-06:00</published><updated>2015-03-14T12:15:00-06:00</updated><author><name>Jed Ludlow</name></author><id>tag:www.jedludlow.com,2015-03-14:/2015/03/ucc-2015.html</id><summary type="html">&lt;p&gt;I presented at Utah Code Camp 2015 on machine learning
 with the Google Prediction API. IPython notebooks
 are &lt;a href="https://github.com/jedludlow/utah-code-camp-2015"&gt;available on GitHub&lt;/a&gt;, or they can be viewed directly
 with the IPython Notebook Viewer here:&lt;/p&gt;
